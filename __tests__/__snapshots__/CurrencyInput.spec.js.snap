@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyInput component should render an <input> element 1`] = `
+<input
+  className="currency-input"
+  onChange={[Function]}
+  type="text"
+  value=""
+/>
+`;
