@@ -21,8 +21,9 @@ class CurrencyInput extends Component {
 
   onChange = e => {
     const value = e.target.value.trim()
+    const period = value.startsWith('.')
     const empty = value === ''
-    const newValue = empty ? '' : this.truncateCents(value)
+    const newValue = empty ? '' : period ? `0${value}` : this.truncateCents(value)
     const noChange = newValue === this.state.value
 
     // Any value other than '' must be a valid parsable number.
