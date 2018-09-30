@@ -1,0 +1,19 @@
+.modal {
+  @extend .fixed;
+  @extend .h-100;
+  @extend .w-100;
+  @extend .bg-white-95;
+  @extend .top-0;
+  @extend .left-0;
+
+  .close {
+    box-sizing: content-box;
+    @extend .pointer;
+    @extend .mla;
+    @extend .pa4;
+  }
+}
+
+.modal-content {
+  @extend .pa3;
+}
