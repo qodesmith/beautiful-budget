@@ -37,5 +37,6 @@
   All our application-specific styles will go below.
   @import each of them in reverse-priority order (bottom = highest priority).
 */
+@import 'open_sans';
 @import 'global';
 @import 'modal';
