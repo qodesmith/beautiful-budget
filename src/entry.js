@@ -7,15 +7,15 @@ import '@babel/polyfill'
 import './styles/styles.scss'
 
 // Import React.
-import React from 'react'
+import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
 
 // Import our store provider.
 import { Provider } from 'react-redux'
 
 // Import our components.
-import App from 'components/App'
-import NotFound from 'components/NotFound'
+import SideBar from 'components/SideBar'
+import Content from 'components/Content'
 
 // Import a store, created & ready to go.
 import store from './store'
@@ -26,7 +26,10 @@ document.body.innerHTML = '<div id="app"></div>'
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Fragment>
+      <SideBar />
+      <Content />
+    </Fragment>
   </Provider>,
   document.querySelector('#app')
 )
