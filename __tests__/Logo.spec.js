@@ -29,13 +29,15 @@ describe('Logo component', () => {
     expect(wrapper2.hasClass('two')).toBe(true)
   })
 
-  it('should set inline styles for width & height', () => {
+  it('should set inline styles for width & height on the svg', () => {
     const wrapper2 = shallow(<Logo size={150} />)
+    const svgProps1 = wrapper1.find('svg').props()
+    const svgProps2 = wrapper2.find('svg').props()
 
-    expect(wrapper1.prop('style').width).toBe('60px')
-    expect(wrapper1.prop('style').height).toBe('60px')
-    expect(wrapper2.prop('style').width).toBe('150px')
-    expect(wrapper2.prop('style').height).toBe('150px')
+    expect(svgProps1.width).toBe('60px')
+    expect(svgProps1.height).toBe('60px')
+    expect(svgProps2.width).toBe('150px')
+    expect(svgProps2.height).toBe('150px')
   })
 
   it('apply other props passed down to the containing div', () => {

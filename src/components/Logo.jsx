@@ -10,8 +10,8 @@ const Logo = ({ className, size = 60, ...rest }) => {
   const sizePxl = `${size}px`
 
   return (
-    <div className={cls} {...rest} style={{width: sizePxl, height: sizePxl }}>
-      <svg height={sizePxl} viewBox="-5 1 591 591.6" width={sizePxl}>
+    <div className={cls} {...rest}>
+      <svg width={sizePxl} height={sizePxl} viewBox="-5 1 591 591.6">
         <g>
           <path d="M 582.097656 530.757812 L 214.652344 530.757812 L 214.652344 0 L 480.03125 0 L 582.097656 102.070312 Z M 582.097656 530.757812" style={{fill:'rgb(52.941176%,80.784314%,85.098039%)'}} />
           <path d="M 214.652344 372.550781 L 214.652344 530.757812 L 582.097656 530.757812 L 582.097656 102.070312 L 533.617188 53.585938 Z M 214.652344 372.550781" style={{fill:'rgb(44.313725%,76.862745%,81.960784%)'}}/>
