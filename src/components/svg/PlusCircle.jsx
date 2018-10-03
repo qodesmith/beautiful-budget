@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 const PlusCircle = ({ size = 30 }) => {
@@ -16,6 +17,10 @@ const PlusCircle = ({ size = 30 }) => {
       </g>
     </svg>
   )
+}
+
+PlusCircle.propTypes = {
+  size: PropTypes.number
 }
 
 export default PlusCircle

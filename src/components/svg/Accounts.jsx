@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 const Accounts = ({ size = 30 }) => {
@@ -19,6 +20,10 @@ const Accounts = ({ size = 30 }) => {
       </g>
     </svg>
   )
+}
+
+Accounts.propTypes = {
+  size: PropTypes.number
 }
 
 export default Accounts

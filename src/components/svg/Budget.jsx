@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 const Budget = ({ size = 30 }) => {
   const sizePxl = `${size}px`
 
   return (
-    <svg viewBox="0 0 455.286 455.286" width={sizePxl} height={sizePxl}>
+    <svg width={sizePxl} height={sizePxl} viewBox="0 0 455.286 455.286">
       <g>
         <path d="M454.055,232.617c-0.684-1.152-1.646-2.114-2.798-2.798h0.48l-293.76-178.24c-2.475-1.429-5.525-1.429-8,0l-145.52,77.6
           c-3.956,1.968-5.568,6.77-3.6,10.726c0.65,1.308,1.647,2.412,2.88,3.194l294.16,182.56c1.273,0.789,2.742,1.205,4.24,1.2
@@ -36,6 +37,10 @@ const Budget = ({ size = 30 }) => {
       </g>
     </svg>
   )
+}
+
+Budget.propTypes = {
+  size: PropTypes.number
 }
 
 export default Budget

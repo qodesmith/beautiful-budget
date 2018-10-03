@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 const Settings = ({ size = 30 }) => {
   const sizePxl = `${size}px`
 
   return(
-    <svg viewBox="0 0 478.703 478.703" width={sizePxl} height={sizePxl}>
+    <svg width={sizePxl} height={sizePxl} viewBox="0 0 478.703 478.703">
       <g>
         <path d="M454.2,189.101l-33.6-5.7c-3.5-11.3-8-22.2-13.5-32.6l19.8-27.7c8.4-11.8,7.1-27.9-3.2-38.1l-29.8-29.8
           c-5.6-5.6-13-8.7-20.9-8.7c-6.2,0-12.1,1.9-17.1,5.5l-27.8,19.8c-10.8-5.7-22.1-10.4-33.8-13.9l-5.6-33.2
@@ -33,6 +34,10 @@ const Settings = ({ size = 30 }) => {
       </g>
     </svg>
   )
+}
+
+Settings.propTypes = {
+  size: PropTypes.number
 }
 
 export default Settings
