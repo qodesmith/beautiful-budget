@@ -13,6 +13,9 @@ import ReactDOM from 'react-dom'
 // Import our store provider.
 import { Provider } from 'react-redux'
 
+// Import React Router stuff.
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+
 // Import our components.
 import SideBar from 'components/SideBar'
 import Content from 'components/Content'
@@ -26,10 +29,14 @@ document.body.innerHTML = '<div id="app"></div>'
 
 ReactDOM.render(
   <Provider store={store}>
-    <Fragment>
-      <SideBar />
-      <Content />
-    </Fragment>
+    <Router>
+      <Fragment>
+        {/* Default to the `/budget` route. There is no `/` route. */}
+        <Route exact path="/" render={() => <Redirect to="/budget" />} />
+        <SideBar />
+        <Content />
+      </Fragment>
+    </Router>
   </Provider>,
   document.querySelector('#app')
 )
