@@ -5,11 +5,12 @@ import Accounts from 'components/svg/Accounts'
 import Budget from 'components/svg/Budget'
 import PlusCircle from 'components/svg/PlusCircle'
 import Settings from 'components/svg/Settings'
+import Question from 'components/svg/Question'
 
 configure({ adapter: new Adapter() })
 
 describe('Svg components', () => {
-  [Accounts, Budget, PlusCircle, Settings].forEach(Component => {
+  [Accounts, Budget, PlusCircle, Settings, Question].forEach(Component => {
     /*
       This nonsense is simply to get the components name so
       we can print it to the console while testing.
@@ -31,5 +32,13 @@ describe('Svg components', () => {
       expect(wrapper2.props().width).toBe('50px')
       expect(wrapper2.props().height).toBe('50px')
     })
+  })
+
+  it('Question - should render a circle based on the circle prop', () => {
+    const wrapper1 = shallow(<Question />)
+    const wrapper2 = shallow(<Question circle />)
+
+    expect(wrapper1.find('path').length).toBe(2)
+    expect(wrapper2.find('path').length).toBe(3)
   })
 })

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const Settings = ({ size = 25 }) => {
   const sizePxl = `${size}px`
 
-  return(
+  return (
     <svg width={sizePxl} height={sizePxl} viewBox="0 0 478.703 478.703">
       <g>
         <path d="M454.2,189.101l-33.6-5.7c-3.5-11.3-8-22.2-13.5-32.6l19.8-27.7c8.4-11.8,7.1-27.9-3.2-38.1l-29.8-29.8
