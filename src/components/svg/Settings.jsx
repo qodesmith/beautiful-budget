@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-const Settings = ({ size = 30 }) => {
+const Settings = ({ size = 25 }) => {
   const sizePxl = `${size}px`
 
   return(

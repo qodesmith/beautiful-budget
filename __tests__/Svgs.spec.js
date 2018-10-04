@@ -26,8 +26,8 @@ describe('Svg components', () => {
     it(`${name} - should set inline styles for width & height on the svg`, () => {
       const wrapper2 = shallow(<Component size={50} />)
 
-      expect(wrapper.props().width).toBe('30px')
-      expect(wrapper.props().height).toBe('30px')
+      expect(wrapper.props().width).toBe('25px')
+      expect(wrapper.props().height).toBe('25px')
       expect(wrapper2.props().width).toBe('50px')
       expect(wrapper2.props().height).toBe('50px')
     })

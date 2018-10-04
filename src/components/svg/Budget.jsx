@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-const Budget = ({ size = 30 }) => {
+const Budget = ({ size = 25 }) => {
   const sizePxl = `${size}px`
 
   return (

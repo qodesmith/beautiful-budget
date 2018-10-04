@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-const Accounts = ({ size = 30 }) => {
+const Accounts = ({ size = 25 }) => {
   const sizePxl = `${size}px`
 
   return (

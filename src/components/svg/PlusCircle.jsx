@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-const PlusCircle = ({ size = 30 }) => {
+const PlusCircle = ({ size = 25 }) => {
   const sizePxl = `${size}px`
 
   return (
