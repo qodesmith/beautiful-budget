@@ -2,9 +2,14 @@
   @extend .fixed;
   @extend .h-100;
   @extend .w-100;
-  @extend .bg-white-95;
   @extend .top-0;
   @extend .left-0;
+  @extend .bg-white-95;
+  @extend .o-0;
+
+  &.show {
+    @extend .o-100;
+  }
 
   .close {
     box-sizing: content-box;

@@ -10,12 +10,12 @@ configure({ adapter: new Adapter() })
 describe('Modal component', () => {
   const mockFxn = jest.fn()
   const wrapper1 = mount(
-    <Modal>
+    <Modal time={100}>
       <div className="test-content">content</div>
     </Modal>
   )
   const wrapper2 = mount(
-    <Modal onClose={mockFxn} className="one two">
+    <Modal onClose={mockFxn} className="one two" time={275}>
       <div className="test-content">content</div>
     </Modal>
   )
@@ -43,12 +43,23 @@ describe('Modal component', () => {
     expect(wrapper2.find('.close').length).toBe(1)
   })
 
-  it('should run the provided `onClose` function when the close button is clicked', () => {
-    wrapper2.find('.close').simulate('click')
+  it('should run the provided `onClose` function when the close button is clicked', done => {
+    /*** The onClose function runs AFTER the `time` prop has passed. ***/
 
-    expect(mockFxn.mock.calls.length).toBe(1)
-    expect(mockFxn).toHaveBeenCalled()
-    expect(mockFxn).toHaveBeenCalledTimes(1)
+    const close = wrapper2.find('.close')
+
+    // Allow the modal to appear before clicking.
+    setTimeout(() => {
+      close.simulate('click')
+
+      // Make assertions after the modal has disappeared.
+      setTimeout(() => {
+        expect(mockFxn.mock.calls.length).toBe(1)
+        expect(mockFxn).toHaveBeenCalled()
+        expect(mockFxn).toHaveBeenCalledTimes(1)
+        done()
+      }, 300)
+    }, 300)
   })
 
   it('should apply class names correctly', () => {
@@ -59,5 +70,13 @@ describe('Modal component', () => {
     expect(modal1.hasClass('two')).toBe(false)
     expect(modal2.hasClass('one')).toBe(true)
     expect(modal2.hasClass('two')).toBe(true)
+  })
+
+  it('should apply a transition inline style correctly based on the time prop', () => {
+    const props1 = wrapper1.find('.modal').props()
+    const props2 = wrapper2.find('.modal').props()
+
+    expect(props1.style.transition).toBe('opacity 0.1s')
+    expect(props2.style.transition).toBe('opacity 0.275s')
   })
 })
