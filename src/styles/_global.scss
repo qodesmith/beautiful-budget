@@ -11,9 +11,19 @@ body {
   // https://goo.gl/YK3TNB
   // size/line-height | family
   font: 20px/1 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #444;
 }
 
 #app {
   @extend .df;
   @extend .h-100;
+}
+
+.link {
+  @extend .teal;
+  @extend .no-decoration;
+
+  &:hover {
+    @extend .u;
+  }
 }
