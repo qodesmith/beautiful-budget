@@ -18,3 +18,13 @@ export const cn = (...args) => {
   // Avoid duplicate names.
   return [...new Set(classNames)].join(' ')
 }
+
+export const once = fxn => (() => {
+  let ran = false
+
+  return (...args) => {
+    if (ran) return
+    ran = true
+    return typeof fxn === 'function' ? fxn(...args) : undefined
+  }
+})()
