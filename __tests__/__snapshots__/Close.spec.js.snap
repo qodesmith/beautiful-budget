@@ -14,8 +14,6 @@ exports[`Close component should render correctly 1`] = `
   <svg
     fill="#000"
     viewBox="0 0 47.971 47.971"
-    x="0px"
-    y="0px"
   >
     <g>
       <path
