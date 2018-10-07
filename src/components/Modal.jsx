@@ -37,9 +37,9 @@ class Modal extends Component {
   onClose = e => {
     const { transition } = this.state
 
-
     if (transition !== 'showing' || this.onCloseRan) return
     this.onCloseRan = true
+    e.persist() // Enables us to pass the event object around without React warnings / errors.
 
     this.setState({ transition: 'hiding' }, () => {
       this.closing = setTimeout(() => {
