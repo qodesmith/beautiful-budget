@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 // By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL
 const Loading = ({ className = null, color = '#fff', text, ...props }) => (
-  <div className={className}>
-    <svg {...props}
+  <div className={className} {...props}>
+    <svg
       className="audio-spinner"
       width="70"
       height="80"

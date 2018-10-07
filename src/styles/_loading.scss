@@ -1,8 +1,17 @@
 .loading {
   @extend .w-100;
   @extend .h-100;
+  @extend .absolute;
+  @extend .top-0;
+  @extend .left-0;
   @extend .df;
   @extend .justify-center;
   @extend .align-items-center;
+  @extend .z2;
   @extend .bg-yellowgreen;
+  @extend .o-100;
+
+  &.hide {
+    @extend .o-0;
+  }
 }

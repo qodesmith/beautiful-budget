@@ -41,10 +41,12 @@ describe('Loading component', () => {
     expect(wrapper1.find('div').length).toBe(1)
   })
 
-  it('should apply any other props passed in to the svg', () => {
+  it('should apply any other props passed in to the containing div', () => {
     const fxn = () => {}
-    const wrapper = shallow(<Loading onClick={fxn} />)
+    const wrapper = shallow(<Loading onClick={fxn} style={{ color: 'blue' }} />)
+    const props = wrapper.find('div').props()
 
-    expect(wrapper.find('svg').props().onClick).toBe(fxn)
+    expect(props.onClick).toBe(fxn)
+    expect(props.style.color).toBe('blue')
   })
 })
