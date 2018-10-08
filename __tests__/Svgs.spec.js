@@ -7,6 +7,7 @@ import PlusCircle from 'components/svg/PlusCircle'
 import Settings from 'components/svg/Settings'
 import Question from 'components/svg/Question'
 
+
 configure({ adapter: new Adapter() })
 
 describe('Svg components', () => {
