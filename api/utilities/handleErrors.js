@@ -57,6 +57,7 @@ function noConnect(res, err) {
 }
 
 module.exports = {
+  createError,
   operationErr,
   sessionStoreErr,
   noConnect

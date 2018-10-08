@@ -47,6 +47,7 @@ app.use(
     saveUninitialized: true, // Forces a session that is uninitialized to be saved to the store.
     secret, // The secret used to sign the session ID cookie.
     cookie: {
+      // 86400000 milliseconds in 1 day.
       maxAge: null, // Default = `null` - closing browser removes cookie & session.
       httpOnly: true // Default = `true` - on the client, `document.cookie` will not be available.
     }
@@ -57,7 +58,9 @@ app.use(
   ADD YOUR CUSTOM ENDPOINTS HERE
   ------------------------------
 */
-// app.get('/my-endpoint', require('./api/my-endpoint'))
+app.get('/api/is-logged-in', require('./api/user').isLoggedIn)
+app.get('/api/login', require('./api/user').login)
+app.get('/api/logout', require('./api/user').logout)
 
 
 /*
