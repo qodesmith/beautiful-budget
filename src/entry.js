@@ -14,11 +14,11 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
 // Import React Router stuff.
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 // Import our components.
-import SideBar from 'components/SideBar'
-import Content from 'components/Content'
+import App from 'components/App'
+import LoginSignupForm from 'components/LoginSignupForm'
 
 // Import a store, created & ready to go.
 import store from './store'
@@ -27,16 +27,16 @@ import store from './store'
 // Create a single element for our app to live.
 document.body.innerHTML = '<div id="app"></div>'
 
+// Mount our react application.
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+    <BrowserRouter>
       <Fragment>
-        {/* Default to the `/budget` route. There is no `/` route. */}
-        <Route exact path="/" render={() => <Redirect to="/budget" />} />
-        <SideBar />
-        <Content />
+        <Route path="/login" render={() => <LoginSignupForm />} />
+        <Route path="/signup" render={() => <LoginSignupForm signup />} />
+        <Route path="/" component={App} />
       </Fragment>
-    </Router>
+    </BrowserRouter>
   </Provider>,
   document.querySelector('#app')
 )
