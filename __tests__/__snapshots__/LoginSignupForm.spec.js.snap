@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginSignupForm component should render the login form correctly 1`] = `
+<form
+  className="login-form"
+  onSubmit={[Function]}
+>
+  <input
+    name="email"
+    onChange={[Function]}
+    placeholder="Email"
+    type="text"
+    value=""
+  />
+  <input
+    name="password"
+    onChange={[Function]}
+    placeholder="Password"
+    type="password"
+    value=""
+  />
+  <button
+    disabled={true}
+    type="submit"
+  >
+    Login
+  </button>
+  <a
+    href="/signup"
+  >
+    Sign up
+  </a>
+</form>
+`;
+
+exports[`LoginSignupForm component should render the signup form correctly 1`] = `
+<form
+  className="login-form"
+  onSubmit={[Function]}
+>
+  <h1
+    className="tc"
+  >
+    Create New Account
+  </h1>
+  <input
+    name="email"
+    onChange={[Function]}
+    placeholder="Email"
+    type="text"
+    value=""
+  />
+  <input
+    name="password"
+    onChange={[Function]}
+    placeholder="Password"
+    type="password"
+    value=""
+  />
+  <button
+    disabled={true}
+    type="submit"
+  >
+    Create Account
+  </button>
+</form>
+`;
