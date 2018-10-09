@@ -1,0 +1,32 @@
+.login-form {
+  @extend .w-100;
+  @extend .h-100;
+
+  input,
+  button {
+    @extend .db;
+    @extend .mha;
+    @extend .mv5;
+    @extend .pa2;
+    @extend .f-1-3rem;
+    font-family: inherit;
+  }
+
+  input {
+    width: 500px;
+    max-width: calc(100% - 20px);
+
+    &::placeholder {
+      @extend .i;
+    }
+  }
+
+  button {
+    @extend .pointer;
+  }
+
+  a {
+    @extend .dt;
+    @extend .mha;
+  }
+}
