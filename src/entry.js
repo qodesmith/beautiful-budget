@@ -32,9 +32,9 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Fragment>
+        <App />
         <Route path="/login" render={() => <LoginSignupForm />} />
         <Route path="/signup" render={() => <LoginSignupForm signup />} />
-        <Route path="/" component={App} />
       </Fragment>
     </BrowserRouter>
   </Provider>,
