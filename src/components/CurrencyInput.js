@@ -4,11 +4,6 @@ import { cn } from 'helpers'
 
 
 class CurrencyInput extends Component {
-  static propTypes = {
-    className: PropTypes.string,
-    onChange: PropTypes.func
-  }
-
   state = { value: '' }
 
   truncateCents = val => {
@@ -51,6 +46,11 @@ class CurrencyInput extends Component {
       />
     )
   }
+}
+
+CurrencyInput.propTypes = {
+  className: PropTypes.string,
+  onChange: PropTypes.func
 }
 
 export default CurrencyInput

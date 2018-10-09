@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { cn } from 'helpers'
 
+
 const Close = ({ className, color = '#000', size = 30, onClick }) => {
   const cls = cn('close', { [className]: className })
   const sizePxl = `${size}px`

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Redirect, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { userSignup, userLogin } from 'actions'
@@ -81,6 +82,13 @@ export class LoginSignupForm extends Component {
       </form>
     )
   }
+}
+
+LoginSignupForm.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  email: PropTypes.string,
+  loginChecked: PropTypes.bool,
+  signup: PropTypes.bool
 }
 
 export default connect(({ user }) => user)(LoginSignupForm)
